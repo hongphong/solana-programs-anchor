@@ -1,0 +1,18 @@
+/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/deps/typenum-8ea898b4a66cd055.rmeta: /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/lib.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/bit.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/int.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/marker_traits.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/operator_aliases.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/private.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/type_operators.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/uint.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/array.rs /Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/op.rs /Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/consts.rs
+
+/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/deps/typenum-8ea898b4a66cd055.d: /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/lib.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/bit.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/int.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/marker_traits.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/operator_aliases.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/private.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/type_operators.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/uint.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/array.rs /Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/op.rs /Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/consts.rs
+
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/lib.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/bit.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/int.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/marker_traits.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/operator_aliases.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/private.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/type_operators.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/uint.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.15.0/src/array.rs:
+/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/op.rs:
+/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/consts.rs:
+
+# env-dep:TYPENUM_BUILD_CONSTS=/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/consts.rs
+# env-dep:TYPENUM_BUILD_OP=/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/build/typenum-3473d2e3efb323d3/out/op.rs

@@ -1,0 +1,1 @@
+/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/bpfel-unknown-unknown/release/solana_helloworld.so: /Users/phong/Projects/RustBeginning/solana-programs-anchor/programs/solana-helloworld/src/lib.rs

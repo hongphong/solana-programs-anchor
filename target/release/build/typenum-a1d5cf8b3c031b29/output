@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/release/build/typenum-a1d5cf8b3c031b29/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/release/build/typenum-a1d5cf8b3c031b29/out/op.rs

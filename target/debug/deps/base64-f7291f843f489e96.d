@@ -1,0 +1,14 @@
+/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/deps/base64-f7291f843f489e96.rmeta: /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/lib.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/chunked_encoder.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/display.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/read/mod.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/read/decoder.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/tables.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/write/mod.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/write/encoder.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/encode.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/decode.rs
+
+/Users/phong/Projects/RustBeginning/solana-programs-anchor/target/debug/deps/base64-f7291f843f489e96.d: /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/lib.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/chunked_encoder.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/display.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/read/mod.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/read/decoder.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/tables.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/write/mod.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/write/encoder.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/encode.rs /Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/decode.rs
+
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/lib.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/chunked_encoder.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/display.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/read/mod.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/read/decoder.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/tables.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/write/mod.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/write/encoder.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/encode.rs:
+/Users/phong/.cargo/registry/src/github.com-1ecc6299db9ec823/base64-0.12.3/src/decode.rs:

@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "name": "solana_helloworld",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [],
+      "args": []
+    }
+  ],
+  "metadata": {
+    "address": "GjzSfNKNVjdc58HJrhYDPfuv5h8ifkcNnfMhWAf5j8zF"
+  }
+}
