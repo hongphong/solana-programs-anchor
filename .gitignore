@@ -44,6 +44,8 @@ keypair/
 target/
 # TypeScript v1 declaration files
 typings/
+.history/
+.anchor/
 
 # TypeScript cache
 *.tsbuildinfo

@@ -1,4 +1,4 @@
-# Rust turorai
+# Rust Tutorial
 Docs: https://learning-rust.github.io/docs/
 ## Install Cargo and Rust Env
 Docs: https://learning-rust.github.io/docs/installation/
@@ -82,5 +82,5 @@ anchor deploy --provider.cluster devnet
 ### Usefull Cli:
 check publickey from keypair: solana address -k target/deploy/solana_helloworld-keypair.json 
 
-### Change keypair for program-keypair:
-solana program write-buffer
+### Test without deploy:
+anchor test --skip-deploy

@@ -22,7 +22,7 @@ pub mod solana_example_counter {
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
-    #[account(init, payer = authority, space = 48)]
+    #[account(init, payer = authority, space = 8 + 40)] //all accounts need 8 bytes for the account discriminator prepended to the account <https://docs.rs/anchor-lang/0.25.0/anchor_lang/attr.account.html>
     pub counter: Account<'info, Counter>,
     #[account(mut)]
     pub authority: Signer<'info>,
@@ -36,8 +36,9 @@ pub struct Increment<'info> {
     pub authority: Signer<'info>,
 }
 
+// Define account that hold data and size is 40 bytes
 #[account]
 pub struct Counter {
-    pub authority: Pubkey,
-    pub count: u64,
+    pub authority: Pubkey, //32 bytes
+    pub count: u64, // 8 bytes
 }
