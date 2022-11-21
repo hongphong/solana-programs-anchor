@@ -22,7 +22,9 @@ pub mod solana_example_counter {
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
-    #[account(init, payer = authority, space = 8 + 40)] //all accounts need 8 bytes for the account discriminator prepended to the account <https://docs.rs/anchor-lang/0.25.0/anchor_lang/attr.account.html>
+    //All accounts need 8 bytes for the account discriminator prepended to the account <https://docs.rs/anchor-lang/0.25.0/anchor_lang/attr.account.html>
+    //Normal Constraints:https://docs.rs/anchor-lang/latest/anchor_lang/derive.Accounts.html
+    #[account(init, payer = authority, space = 8 + 40)] 
     pub counter: Account<'info, Counter>,
     #[account(mut)]
     pub authority: Signer<'info>,

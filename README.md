@@ -1,7 +1,7 @@
 # Rust Tutorial
-Docs: https://learning-rust.github.io/docs/
+##### Docs: https://learning-rust.github.io/docs/
 ## Install Cargo and Rust Env
-Docs: https://learning-rust.github.io/docs/installation/
+##### Docs: https://learning-rust.github.io/docs/installation/
 -- install rustc: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 -- create projects with cargo:
 >   Create a new project: cargo new
@@ -14,10 +14,10 @@ Docs: https://learning-rust.github.io/docs/installation/
     Generate the project documentation via rustdoc: cargo doc
     Analyze the project to see it has any errors, without building it: cargo check
 ## Some definitions need to focus on Rust
-####-- Ownership: 
+#### Ownership: 
     + https://www.educative.io/answers/moving-ownership-in-rust
     + https://blog.thoughtram.io/ownership-in-rust/
-####-- Reference: 
+#### Reference: 
     + https://www.educative.io/answers/how-to-use-references-in-rust
     + https://blog.thoughtram.io/references-in-rust/
 
@@ -74,8 +74,16 @@ brew install yarn
 ### Init project 
 anchor init <project name>
 
+### Create new program
+anchor new <program name>
+
+### Build programs
+anchor build
+anchor build -p <program name> (For specific program)
+
 ### deploy
 anchor deploy --provider.cluster devnet
+anchor deploy --provider.cluster devnet -p <program name> (For specific program)
 
 ### Docs for CLI: https://book.anchor-lang.com/anchor_references/cli.html
 

@@ -9,18 +9,18 @@ const { SystemProgram } = anchor.web3;
 import { PublicKey } from '@solana/web3.js';
 
 describe("solana_example_counter", () => {
+    return
     const provider = anchor.AnchorProvider.env()
     anchor.setProvider(provider);
     const program = anchor.workspace.SolanaExampleCounter as Program<IDL>;
     console.log(`Check programId: ${program.programId.toString()}`)
-
-    let defaultCounterAcc = new PublicKey("DY3MwxAnMm8tzsz2oKf4hUUpT7AbKoZGXRA4JnmYpQTT");
+    console.log(`Current wallet: ${provider.wallet.publicKey.toString()}`)
+    let defaultCounterAcc = new PublicKey("XhrKx3b2gvwg55wBHJnTpWiXsMK2aXLKHLX1RvfByoq");
     // Define test-cases
-    it("[Test 1]: Create account to store counter", async () => {
+    it("[Test 1]: Create account to store counter", async (done) => {
         // The Account to create.
         const counterAcc = anchor.web3.Keypair.generate();
-        defaultCounterAcc = counterAcc.pubkey;
-
+        console.log(`New account store counter: ${counterAcc.publicKey}`)
         await program
             .methods
             .initialize(new anchor.BN(1234))
@@ -29,16 +29,15 @@ describe("solana_example_counter", () => {
                 authority: provider.wallet.publicKey,
                 systemProgram: SystemProgram.programId,
             }).signers([counterAcc]).rpc();
-
-
         // Fetch the newly created account from the cluster.
         const account = await program.account.counter.fetch(counterAcc.publicKey);
-
+        defaultCounterAcc = counterAcc.publicKey;
         // Check it's state was initialized.
         assert.ok(account.count.eq(new anchor.BN(1234)));
+
     })
 
-    it("[Test 2]: Increament counter", async () => {
+    it("[Test 2]: Increament counter", async function (done) {
         // Invoke the update rpc.
         await program.methods.increment().accounts({
             counter: defaultCounterAcc,
