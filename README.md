@@ -47,6 +47,7 @@ There 4 main layers:
 -- Set keypair: solana config set --keypair <path>
 -- Set airdrop: solana airdrop 2
 -- Check current public key of current account: solana address
+-- Check current state of one account: solana account <account address>
 ### Install ENV:
 -- Set testnet url:  solana config set --url http://api.devnet.solana.com    
 -- Generate keypair: solana-keygen new --outfile keypair/test-keypair.json
@@ -60,7 +61,9 @@ There 4 main layers:
 
 # INSTALL ANCHOR
 ##### CHECK ENV
-solana --version
+anchor --version
+
+##### START TEST NODE LOCALHOST
 solana-test-validator
 
 ##### INSTALL ANCHOR:
@@ -92,3 +95,4 @@ check publickey from keypair: solana address -k target/deploy/solana_helloworld-
 
 ### Test without deploy:
 anchor test --skip-deploy
+anchor run 

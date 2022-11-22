@@ -4,6 +4,7 @@ skip-lint = false
 
 [registry]
 url = "https://api.devnet.solana.com"
+# url = "http://127.0.0.1:8899"
 
 [programs.devnet]
 solana_example_counter = "EocvjwaAyd7pxUqYNQCyvBD9pKTip1axngq48W4bZXUu"
@@ -12,7 +13,6 @@ solana_example_token = "F1ypE56CREbfeCBVreAWJnB8t8VthMftpowviNhKELNY"
 [provider]
 cluster = "devnet"
 devnet = "api.devnet.solana.com"
-# wallet = "/Users/phong/Projects/RustBeginning/solana-programs-anchor/keypair/dev.json"
 wallet = "/Users/phong/Projects/RustBeginning/solana-programs-anchor/keypair/dev.json"
 
 [scripts]
