@@ -42,5 +42,5 @@ pub struct Increment<'info> {
 #[account]
 pub struct Counter {
     pub authority: Pubkey, //32 bytes
-    pub count: u64, // 8 bytes
+    pub count: u64
 }

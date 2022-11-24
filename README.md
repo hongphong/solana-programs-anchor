@@ -13,20 +13,12 @@
     Run benchmarks: cargo bench
     Generate the project documentation via rustdoc: cargo doc
     Analyze the project to see it has any errors, without building it: cargo check
-## Some definitions need to focus on Rust
-#### Ownership: 
-    + https://www.educative.io/answers/moving-ownership-in-rust
-    + https://blog.thoughtram.io/ownership-in-rust/
-#### Reference: 
-    + https://www.educative.io/answers/how-to-use-references-in-rust
-    + https://blog.thoughtram.io/references-in-rust/
-
-
 
 # Solana Overview
 ## Architecutre:
-Docs: https://www.youtube.com/watch?v=izV2Ev3To_s
-https://medium.com/solana-labs/proof-of-history-a-clock-for-blockchain-cf47a61a9274
+Docs: 
++ https://www.youtube.com/watch?v=izV2Ev3To_s
++ https://medium.com/solana-labs/proof-of-history-a-clock-for-blockchain-cf47a61a9274
 There 4 main layers:
 -- Setup Layer: 
    + Gulf Stream: Transfer transaction from clients to Leader Validator
@@ -41,7 +33,13 @@ There 4 main layers:
    + Sealevel
 -- Application SC Layer: Wallets, Solana Programs
 
-# USEFUL CLI COMMANDs:
+## Install Solana (MacOS)
+> sh -c "$(curl -sSfL https://release.solana.com/v1.14.8/install)"
+
+### Verify
+> solana --version
+
+### Useful CLI Commands:
 -- Set testnet url:  solana config set --url http://api.devnet.solana.com    
 -- Generate keypair: solana-keygen new --outfile keypair/test-keypair.json
 -- Set keypair: solana config set --keypair <path>
@@ -84,7 +82,7 @@ anchor new <program name>
 anchor build
 anchor build -p <program name> (For specific program)
 
-### deploy
+### Deploy
 anchor deploy --provider.cluster devnet
 anchor deploy --provider.cluster devnet -p <program name> (For specific program)
 
@@ -94,5 +92,6 @@ anchor deploy --provider.cluster devnet -p <program name> (For specific program)
 check publickey from keypair: solana address -k target/deploy/solana_helloworld-keypair.json 
 
 ### Test without deploy:
-anchor test --skip-deploy
-anchor run 
+anchor test --skip-deploy --skip-local-validator -provider.cluster <devnet|localnet>
+anchor run <script test defined in Anchor.toml> --provider.cluster localnet
+

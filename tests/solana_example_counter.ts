@@ -9,7 +9,6 @@ const { SystemProgram } = anchor.web3;
 import { PublicKey } from '@solana/web3.js';
 
 describe("solana_example_counter", () => {
-    return
     const provider = anchor.AnchorProvider.env()
     anchor.setProvider(provider);
     const program = anchor.workspace.SolanaExampleCounter as Program<IDL>;
@@ -17,8 +16,9 @@ describe("solana_example_counter", () => {
     console.log(`Current wallet: ${provider.wallet.publicKey.toString()}`)
     let defaultCounterAcc = new PublicKey("XhrKx3b2gvwg55wBHJnTpWiXsMK2aXLKHLX1RvfByoq");
     // Define test-cases
-    it("[Test 1]: Create account to store counter", async (done) => {
+    it("[Test 1]: Create account to store counter", async () => {
         // The Account to create.
+        await Promise.resolve();
         const counterAcc = anchor.web3.Keypair.generate();
         console.log(`New account store counter: ${counterAcc.publicKey}`)
         await program
@@ -37,8 +37,9 @@ describe("solana_example_counter", () => {
 
     })
 
-    it("[Test 2]: Increament counter", async function (done) {
+    it("[Test 2]: Increament counter", async function () {
         // Invoke the update rpc.
+        await Promise.resolve();
         await program.methods.increment().accounts({
             counter: defaultCounterAcc,
             authority: provider.wallet.publicKey,
@@ -46,8 +47,6 @@ describe("solana_example_counter", () => {
         const data = await program.account.counter.fetch(defaultCounterAcc)
         console.log(`Current counter: ${data.count.toString()}`)
         // Check it's state was mutated.
-        assert.ok(data.count >= new anchor.BN(1234));
-
-        // #endregion update-test
+        assert.ok(data.count >= new anchor.BN(1234)); 
     });
 })
