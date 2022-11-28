@@ -1,5 +1,6 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::TokenAccount;
+pub mod custom_errors;
 
 declare_id!("3AVrFfBQdN5UR9sdaEUjwkmYBcqLKAknhqqamZ9idPP2");
 
@@ -7,6 +8,10 @@ declare_id!("3AVrFfBQdN5UR9sdaEUjwkmYBcqLKAknhqqamZ9idPP2");
 pub mod solana_example_constraints {
     use super::*;
 
+    /**
+     * Example: Create an Account Data by constraint
+     * Need to focus on space of struct: https://book.anchor-lang.com/anchor_references/space.html
+     */
     pub fn init_by_constraint(ctx: Context<InitAcc>, data: u64) -> Result<()> {
         if data > 0 {
             ctx.accounts.new_acc.data = data;
@@ -19,8 +24,22 @@ pub mod solana_example_constraints {
         Ok(())
     }
 
+    /**
+     * Example: Verify owner of token
+     */
     pub fn verify_owner(ctx: Context<VerifyOwner>) -> Result<()> {
         Ok(())
+    }
+
+    /**
+     * Example: Handling errors
+     */
+    pub fn handling_errors(ctx: Context<HandlingError>, data: u64) -> Result<()> {
+        if data > 100 {
+            err!(custom_errors::DataInvalid::DataInvalid)
+        } else {
+            Ok(())
+        }
     }
 }
 
@@ -44,4 +63,11 @@ pub struct VerifyOwner<'info> {
     #[account(constraint = authority.key == &token.owner)]
     token: Account<'info, TokenAccount>,
     authority: Signer<'info>,
+}
+
+#[derive(Accounts)]
+pub struct HandlingError<'info> {
+    /// CHECK: testing custom errors by defined constraints
+    #[account(signer @ custom_errors::DataInvalid::DataInvalid)]
+    authority: AccountInfo<'info>,
 }

@@ -4,16 +4,25 @@
 // The milestone project of the intermediate section covers a more realistic program with multiple CPIs.
 use anchor_lang::prelude::*;
 
+// Define program_id
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
+// main body
 #[program]
 pub mod solana_example_cpi {
     use super::*;
+    // define list instructions (methods)
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+    pub fn instruction_one(ctx: Context<CpxForInstOne>) -> Result<()> {
+        Ok(())
+    }
+    pub fn instruction_two(ctx: Context<CpxForInstTwo>) -> Result<()> {
         Ok(())
     }
 }
 
 #[derive(Accounts)]
-pub struct Initialize {}
+pub struct CpxForInstOne {}
+
+#[derive(Accounts)]
+pub struct CpxForInstTwo {}

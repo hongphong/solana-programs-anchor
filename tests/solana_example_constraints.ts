@@ -7,6 +7,7 @@ import { IDL } from "../target/types/solana_example_constraints.ts";
 import idl from "../target/idl/solana_example_constraints.json"
 const { SystemProgram } = anchor.web3;
 import { PublicKey } from '@solana/web3.js';
+import { BN } from 'bn.js';
 
 describe("solana_example_constraints", () => {
     const provider = anchor.AnchorProvider.env()
@@ -45,6 +46,17 @@ describe("solana_example_constraints", () => {
             .verifyOwner()
             .accounts({
                 token: new PublicKey("3AVrFfBQdN5UR9sdaEUjwkmYBcqLKAknhqqamZ9idPP2"),
+                authority: provider.wallet.publicKey
+            })
+            .rpc();
+    })
+
+    it("[Test 3]: Testing custom errors", async () => {
+        await Promise.resolve();
+        await program
+            .methods
+            .handlingErrors(new BN(99))
+            .accounts({
                 authority: provider.wallet.publicKey
             })
             .rpc();

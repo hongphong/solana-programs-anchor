@@ -6,41 +6,39 @@ declare_id!("EocvjwaAyd7pxUqYNQCyvBD9pKTip1axngq48W4bZXUu");
 pub mod solana_example_counter {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>, start: u64) -> Result<()> {
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
         let counter = &mut ctx.accounts.counter;
-        counter.authority = *ctx.accounts.authority.key;
-        counter.count = start;
+        counter.count = 0;
+        msg!("Counter account created. Current count: {}", counter.count);
         Ok(())
     }
 
-    pub fn increment(ctx: Context<Increment>) -> Result<()> {
+    pub fn increment(ctx: Context<Update>) -> Result<()> {
         let counter = &mut ctx.accounts.counter;
-        counter.count += 1;
+        msg!("Previous counter: {}", counter.count);
+        counter.count = counter.count.checked_add(1).unwrap();
+        msg!("Counter incremented. Current count: {}", counter.count);
         Ok(())
     }
 }
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
-    //All accounts need 8 bytes for the account discriminator prepended to the account <https://docs.rs/anchor-lang/0.25.0/anchor_lang/attr.account.html>
-    //Normal Constraints:https://docs.rs/anchor-lang/latest/anchor_lang/derive.Accounts.html
-    #[account(init, payer = authority, space = 8 + 40)] 
+    #[account(init, payer = user, space = 8 + 8)]
     pub counter: Account<'info, Counter>,
     #[account(mut)]
-    pub authority: Signer<'info>,
+    pub user: Signer<'info>,
     pub system_program: Program<'info, System>,
 }
 
 #[derive(Accounts)]
-pub struct Increment<'info> {
-    #[account(mut, has_one = authority)]
+pub struct Update<'info> {
+    #[account(mut)]
     pub counter: Account<'info, Counter>,
-    pub authority: Signer<'info>,
+    pub user: Signer<'info>,
 }
 
-// Define account that hold data and size is 40 bytes
 #[account]
 pub struct Counter {
-    pub authority: Pubkey, //32 bytes
-    pub count: u64
+    pub count: u64,
 }
