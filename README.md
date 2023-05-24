@@ -86,6 +86,10 @@ anchor build -p <program name> (For specific program)
 anchor deploy --provider.cluster devnet
 anchor deploy --provider.cluster devnet -p <program name> (For specific program)
 
+### public IDL
+anchor idl init --filepath <FILEPATH> <PROGRAM_ID> --provider.cluster <CLUSTER> --provider.wallet <WALLET>
+EX: anchor idl init --filepath ./target/idl/solana_example_counter.json EocvjwaAyd7pxUqYNQCyvBD9pKTip1axngq48W4bZXUu --provider.cluster devnet 
+
 ### Docs for CLI: https://book.anchor-lang.com/anchor_references/cli.html
 
 ### Usefull Cli:

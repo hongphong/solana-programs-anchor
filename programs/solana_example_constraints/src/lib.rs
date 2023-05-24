@@ -20,6 +20,8 @@ pub mod solana_example_constraints {
                 ctx.accounts.new_acc.key().to_owned()
             )
         }
+        msg!("Hello Linh em");
+        msg!("Duc dit khong em");
         ctx.accounts.new_acc.owner = *ctx.accounts.payer.key;
         Ok(())
     }
